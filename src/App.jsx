@@ -1,34 +1,40 @@
 import React from "react";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 
-const TypingEffect = ({ words, typingSpeed = 100, erasingSpeed = 50, pauseTime = 1000 }) => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
+const words = ["Graphic design.", "Meta Ads.", "Website development."];
+
+const TypingEffect = () => {
+  const [displayText, setDisplayText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    const currentWord = words[currentWordIndex];
+    const currentWord = words[wordIndex];
 
-    if (!isDeleting && charIndex < currentWord.length) {
-      setTimeout(() => {
-        setDisplayedText(currentWord.substring(0, charIndex + 1));
-        setCharIndex((prev) => prev + 1);
-      }, typingSpeed);
-    } else if (isDeleting && charIndex > 0) {
-      setTimeout(() => {
-        setDisplayedText(currentWord.substring(0, charIndex - 1));
-        setCharIndex((prev) => prev - 1);
-      }, erasingSpeed);
-    } else if (!isDeleting && charIndex === currentWord.length) {
-      setTimeout(() => setIsDeleting(true), pauseTime);
-    } else if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+    if (isDeleting) {
+      if (charIndex > 0) {
+        setTimeout(() => setCharIndex(charIndex - 1), 100);
+      } else {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+      }
+    } else {
+      if (charIndex < currentWord.length) {
+        setTimeout(() => setCharIndex(charIndex + 1), 100);
+      } else {
+        setTimeout(() => setIsDeleting(true), 1000); // Pause before deleting
+      }
     }
-  }, [charIndex, isDeleting, currentWordIndex, words, typingSpeed, erasingSpeed, pauseTime]);
 
-  return <span className="text-yellow-400">{displayedText}</span>;
+    setDisplayText(currentWord.substring(0, charIndex));
+  }, [charIndex, isDeleting, wordIndex]);
+
+  return (
+    <p>
+      We handle <span className="highlight">{displayText}</span>|
+    </p>
+  );
 };
 
 
@@ -54,7 +60,7 @@ const App = () => {
           We help travel agents get <span className="text-yellow-400">2.3x</span> more business, in less than <span className="text-yellow-400">30 days.</span>
         </h2>
         <p className="mt-4 text-lg">
-          Get consistent high-paying travel clients.<br />We handle <span className="text-yellow-400">Meta ads.</span>
+          Get consistent high-paying travel clients.<br /></TypingEffect>
         </p>
         <button className="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold">
           Get started
