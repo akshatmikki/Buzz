@@ -1,6 +1,6 @@
 import React from "react";
 import { FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
-import TypingEffect from "./components/typingeffect";
+import TypingEffect from "./typingeffect";
 
 const App = () => {
   return (
