@@ -60,7 +60,7 @@ const App = () => {
           We help travel agents get <span className="text-yellow-400">2.3x</span> more business, in less than <span className="text-yellow-400">30 days.</span>
         </h2>
         <p className="mt-4 text-lg">
-          Get consistent high-paying travel clients.<br /></TypingEffect>
+          Get consistent high-paying travel clients.<br /><TypingEffect />
         </p>
         <button className="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold">
           Get started
