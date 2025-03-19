@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const words = ["Graphic design.", "Meta Ads.", "Google Ads.", "Copywriting"];
+const words = ["Graphic design.", "Meta Ads.", "Google Ads.", "Copywriting."];
 
 const TypingEffect = () => {
   const [displayText, setDisplayText] = useState("");
