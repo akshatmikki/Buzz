@@ -8,15 +8,13 @@ const App = () => {
       <div className="bg-[#007A99] text-white font-sans min-h-screen flex flex-col justify-center items-center text-center ">
       {/* Header Section */}
       <header className="absolute top-6 left-6 flex items-center">
-        <h1 className="text-xl font-bold text-yellow-400"><span className="inline-block group cursor-pointer">
+        <h1 className="text-xl font-bold text-yellow-400"><span className="inline-block group cursor-pointer tracking-normal transition-all duration-300 ease-in-out hover:tracking-widest">
   {["B", "u", "z", "z"].map((char, index) => (
     <span
       key={index}
       className="inline-block transition-all duration-300 ease-in-out group-hover:scale-150 group-hover:rotate-[15deg] group-hover:text-white"
       style={{
-        display: "inline-block",
-        transitionDelay: `${index * 50}ms`, // Staggered animation
-        marginRight: "10px", // Adds space between letters
+        transitionDelay: `${index * 50}ms`, // Staggered effect
       }}
     >
       {char}
