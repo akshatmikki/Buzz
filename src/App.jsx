@@ -34,7 +34,7 @@ const TypingEffect = ({ words, typingSpeed = 100, erasingSpeed = 50, pauseTime =
 
 const App = () => {
   return (
-    <div className="flexbox">
+    <div className="flex">
       <div className="bg-[#007A99] text-white font-sans min-h-screen flex flex-col justify-center items-center text-center ">
       {/* Header Section */}
       <header className="absolute top-6 left-6 flex items-center">
