@@ -8,7 +8,9 @@ const App = () => {
       <div className="bg-[#007A99] text-white font-sans min-h-screen flex flex-col justify-center items-center text-center ">
       {/* Header Section */}
       <header className="absolute top-6 left-6 flex items-center">
-        <h1 className="text-xl font-bold text-yellow-400">BUZZ</h1>
+        <h1 className="text-xl font-bold text-yellow-400"><span className="transition-transform transform hover:scale-125 hover:rotate-6 hover:text-white">
+  Buzz
+</span></h1>
       </header>
       
       {/* Social Icons */}
@@ -17,7 +19,7 @@ const App = () => {
         <FaInstagram />
         <FaEnvelope />
       </div>
-      <div className="absolute bottom-0rem left-300 h-31 border-t-4 border-l-4 border-[#ffffff] "></div> 
+      <div className="absolute bottom-0 left-300 h-31 border-t-4 border-l-4 border-[#ffffff] "></div> 
       {/* Hero Section */}
       <section className="max-w-2xl">
         <h2 className="text-4xl font-bold leading-tight">
