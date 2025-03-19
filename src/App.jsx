@@ -48,7 +48,7 @@ const App = () => {
       <section className=" w-full flex flex-col md:flex-row-reverse items-center text-black bg-white px-12 py-16 relative">
         {/* Decorative Line Transition */}
         {/* Decorative Line Transition */}
-<div className="absolute top-0 left-[20%] sm:left-[30%] md:left-[40%] lg:left-[300px] h-8 border-t-4 border-l-4 border-[#007A99]"></div>
+<div className="absolute top-0 left-[20%] sm:left-[30%] md:left-[40%] lg:left-[600px] h-31 border-t-4 border-l-4 border-[#007A99]"></div>
 <div className="absolute top-[40px] left-[10%] sm:left-[20%] md:left-[30%] lg:left-[150px] w-[50%] md:w-[150px] border-t-4 border-[#007A99]"></div>
 
         
