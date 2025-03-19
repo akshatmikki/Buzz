@@ -12,10 +12,11 @@ const App = () => {
   {["B", "u", "z", "z"].map((char, index) => (
     <span
       key={index}
-      className="inline-block transition-transform duration-300 ease-in-out group-hover:scale-150 group-hover:rotate-[10deg] group-hover:text-white group-hover:tracking-widest"
+      className="inline-block transition-all duration-300 ease-in-out group-hover:scale-150 group-hover:rotate-[15deg] group-hover:text-white"
       style={{
         display: "inline-block",
-        transitionDelay: `${index * 50}ms`, // Cascading effect
+        transitionDelay: `${index * 50}ms`, // Staggered animation
+        marginRight: "10px", // Adds space between letters
       }}
     >
       {char}
