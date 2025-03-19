@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const words = ["Graphic design.", "Meta Ads.", "Website development."];
+const words = ["Graphic design.", "Meta Ads.", "Google Ads.", "Copywriting"];
 
 const TypingEffect = () => {
   const [displayText, setDisplayText] = useState("");
@@ -31,7 +31,7 @@ const TypingEffect = () => {
 
   return (
     <p>
-      We handle <span className="highlight">{displayText}</span>|
+      We handle <span className="text-yellow-400">{displayText}</span>|
     </p>
   );
 };
