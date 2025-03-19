@@ -28,7 +28,7 @@ const TypingEffect = ({ words, typingSpeed = 100, erasingSpeed = 50, pauseTime =
     }
   }, [charIndex, isDeleting, currentWordIndex, words, typingSpeed, erasingSpeed, pauseTime]);
 
-  return <span className="text-white">{displayedText}</span>;
+  return <span className="text-yellow-400">{displayedText}</span>;
 };
 
 
@@ -47,7 +47,7 @@ const App = () => {
         <FaInstagram />
         <FaEnvelope />
       </div>
-      <div className="absolute bottom-0rem left-600rem h-31 border-t-4 border-l-4 border-[#ffffff] "></div> 
+      <div className="absolute bottom-0rem left-300 h-31 border-t-4 border-l-4 border-[#ffffff] "></div> 
       {/* Hero Section */}
       <section className="max-w-2xl">
         <h2 className="text-4xl font-bold leading-tight">
