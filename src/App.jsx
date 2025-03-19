@@ -8,9 +8,18 @@ const App = () => {
       <div className="bg-[#007A99] text-white font-sans min-h-screen flex flex-col justify-center items-center text-center ">
       {/* Header Section */}
       <header className="absolute top-6 left-6 flex items-center">
-        <h1 className="text-xl font-bold text-yellow-400"><span className="transition-transform transform hover:scale-125 hover:rotate-6 hover:text-white">
-  Buzz
-</span></h1>
+        <h1 className="text-xl font-bold text-yellow-400"><span className="inline-block group cursor-pointer">
+  {["B", "u", "z", "z"].map((char, index) => (
+    <span
+      key={index}
+      className="inline-block transition-transform duration-300 ease-in-out group-hover:scale-150 group-hover:rotate-[10deg] group-hover:text-white"
+      style={{ display: "inline-block", transitionDelay: `${index * 50}ms` }} // Delay effect for each letter
+    >
+      {char}
+    </span>
+  ))}
+</span>
+</h1>
       </header>
       
       {/* Social Icons */}
